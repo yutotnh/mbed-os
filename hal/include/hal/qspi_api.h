@@ -183,7 +183,7 @@ qspi_status_t qspi_frequency(qspi_t *obj, int hz);
  * @param command QSPI command
  * @param data TX buffer
  * @param[in,out] length in - TX buffer length in bytes, out - number of bytes written
- * @return QSPI_STATUS_OK if the data has been succesfully sent
+ * @return QSPI_STATUS_OK if the data has been successfully sent
            QSPI_STATUS_INVALID_PARAMETER if invalid parameter found
            QSPI_STATUS_ERROR otherwise
  */
@@ -197,7 +197,7 @@ qspi_status_t qspi_write(qspi_t *obj, const qspi_command_t *command, const void 
  * @param tx_size TX buffer length in bytes
  * @param rx_data RX buffer
  * @param rx_size RX buffer length in bytes
- * @return QSPI_STATUS_OK if the data has been succesfully sent
+ * @return QSPI_STATUS_OK if the data has been successfully sent
            QSPI_STATUS_INVALID_PARAMETER if invalid parameter found
            QSPI_STATUS_ERROR otherwise
  */
@@ -209,7 +209,7 @@ qspi_status_t qspi_command_transfer(qspi_t *obj, const qspi_command_t *command, 
  * @param command QSPI command
  * @param data RX buffer
  * @param[in,out] length in - RX buffer length in bytes, out - number of bytes read
- * @return QSPI_STATUS_OK if data has been succesfully received
+ * @return QSPI_STATUS_OK if data has been successfully received
            QSPI_STATUS_INVALID_PARAMETER if invalid parameter found
            QSPI_STATUS_ERROR otherwise
  */

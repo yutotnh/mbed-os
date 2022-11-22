@@ -1391,7 +1391,7 @@ static void serial_dmaSetupChannel(serial_t *obj, bool tx_nrx)
 *       When allocated, state changes to DMA_USAGE_TEMPORARY_ALLOCATED.
 *   * ALWAYS:
 *       Will try to allocate a channel and keep it.
-*       If succesfully allocated, state changes to DMA_USAGE_ALLOCATED.
+*       If successfully allocated, state changes to DMA_USAGE_ALLOCATED.
 ******************************************/
 static void serial_dmaTrySetState(DMA_OPTIONS_t *obj, DMAUsage requestedState, serial_t *serialPtr, bool tx_nrx)
 {

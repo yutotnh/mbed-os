@@ -2559,7 +2559,7 @@ void thread_router_bootstrap_router_id_release(protocol_interface_info_entry_t *
 {
     tr_debug("Router ID Release");
     if (thread_management_client_router_id_release(cur->id, cur->mac, cur->thread_info->routerShortAddress, thread_bootstrap_client_router_id_release_cb) == 0) {
-        // Release message sent succesfully
+        // Release message sent successfully
         cur->thread_info->routerShortAddress = 0xfffe;
         cur->thread_info->releaseRouterId = true;
     }

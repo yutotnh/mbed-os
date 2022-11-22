@@ -42,11 +42,11 @@ typedef struct pwmout_s pwmout_t;
  * * ::pwmout_write sets the output duty-cycle in range <0.0f, 1.0f>
  * * ::pwmout_read returns the current float-point output duty-cycle in range <0.0f, 1.0f>
  * * ::pwmout_period sets the PWM period specified in seconds, keeping the duty cycle the same
- * * ::pwmout_period_ms sets the PWM period specified in miliseconds, keeping the duty cycle the same
+ * * ::pwmout_period_ms sets the PWM period specified in milliseconds, keeping the duty cycle the same
  * * ::pwmout_period_us sets the PWM period specified in microseconds, keeping the duty cycle the same
  * * ::pwmout_read_period_us reads the PWM period specified in microseconds
  * * ::pwmout_pulsewidth sets the PWM pulsewidth specified in seconds, keeping the period the same
- * * ::pwmout_pulsewidth_ms sets the PWM pulsewidth specified in miliseconds, keeping the period the same
+ * * ::pwmout_pulsewidth_ms sets the PWM pulsewidth specified in milliseconds, keeping the period the same
  * * ::pwmout_pulsewidth_us sets the PWM pulsewidth specified in microseconds, keeping the period the same
  * * ::pwmout_read_pulsewidth_us read the PWM pulsewidth specified in microseconds
  * * The accuracy of the PWM is +/- 10%
@@ -113,10 +113,10 @@ float pwmout_read(pwmout_t *obj);
  */
 void pwmout_period(pwmout_t *obj, float seconds);
 
-/** Set the PWM period specified in miliseconds, keeping the duty cycle the same
+/** Set the PWM period specified in milliseconds, keeping the duty cycle the same
  *
  * @param obj The pwmout object
- * @param ms  The milisecond period
+ * @param ms  The millisecond period
  */
 void pwmout_period_ms(pwmout_t *obj, int ms);
 
@@ -141,10 +141,10 @@ int pwmout_read_period_us(pwmout_t *obj);
  */
 void pwmout_pulsewidth(pwmout_t *obj, float seconds);
 
-/** Set the PWM pulsewidth specified in miliseconds, keeping the period the same.
+/** Set the PWM pulsewidth specified in milliseconds, keeping the period the same.
  *
  * @param obj The pwmout object
- * @param ms  The floating-point pulsewidth in miliseconds
+ * @param ms  The floating-point pulsewidth in milliseconds
  */
 void pwmout_pulsewidth_ms(pwmout_t *obj, int ms);
 

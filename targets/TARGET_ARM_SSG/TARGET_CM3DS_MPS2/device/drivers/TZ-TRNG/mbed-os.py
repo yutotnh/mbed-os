@@ -26,7 +26,7 @@ The driver is used in Mbed OS in 800-90B TRNG mode.
 It removes Makefiles, PDF, test files and FE-TRNG C files (the other TRNG mode
 not used).
 
-After the script is executed, this driver can be succesfully integrated and
+After the script is executed, this driver can be successfully integrated and
 compiled in a Mbed OS project and the CC_TrngGetSource function can be called,
 for example in a Mbed OS HAL implementation for a new target.
 

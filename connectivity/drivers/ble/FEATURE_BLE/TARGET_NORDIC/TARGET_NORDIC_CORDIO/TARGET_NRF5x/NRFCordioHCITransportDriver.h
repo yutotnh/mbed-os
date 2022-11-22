@@ -34,7 +34,7 @@ public:
     virtual ~NRFCordioHCITransportDriver();
 
     /**
-     * Inialization of the transport.
+     * Initialization of the transport.
      */
     virtual void initialize();
 
@@ -53,7 +53,7 @@ public:
      * @param pData Pointer to the data to transmit. This is an WSF buffer
      * and if CORDIO_ZERO_COPY_HCI is enabled we receive ownership.
      *
-     * @return The number of bytes which have been transmited.
+     * @return The number of bytes which have been transmitted.
      */
     virtual uint16_t write(uint8_t type, uint16_t len, uint8_t *pData);
 };

@@ -816,7 +816,7 @@ static void thread_announce_ntf_cb(void *arg)
 
 static void thread_announce_success_cb(void *arg)
 {
-    // We come here when we have succesfully attached to announced channel and then we announce this back
+    // We come here when we have successfully attached to announced channel and then we announce this back
     protocol_interface_info_entry_t *cur = arg;
 
     if (!cur || !cur->thread_info->announcement_info) {

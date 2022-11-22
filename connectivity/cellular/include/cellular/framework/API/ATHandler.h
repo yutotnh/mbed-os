@@ -426,7 +426,7 @@ public: // just for debugging
     void set_debug(bool debug_on);
 
     /**
-     * Get degug state set by @ref set_debug
+     * Get debug state set by @ref set_debug
      *
      *  @return current state of debug
      */

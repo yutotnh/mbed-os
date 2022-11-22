@@ -286,7 +286,7 @@ uint8_t MCR20Drv_DirectAccessSPIRead
 }
 
 /*---------------------------------------------------------------------------
-* Name: MCR20Drv_DirectAccessSPIMultyByteRead
+* Name: MCR20Drv_DirectAccessSPIMultiByteRead
 * Description: -
 * Parameters: -
 * Return: -

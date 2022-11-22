@@ -47,7 +47,7 @@ class TimingDriftSync(BaseHostTest):
     #
     #
     # As we increase the measurement_stretch, the error because of transport delay diminishes.
-    # The values of measurement_stretch is propotional to round_trip_base_time(transport delays)
+    # The values of measurement_stretch is proportional to round_trip_base_time(transport delays)
     # by factor time_measurement_multiplier.This multiplier is used is 80 to tolerate 2 sec of
     # transport delay and test time ~ 180 secs
     #
@@ -61,7 +61,7 @@ class TimingDriftSync(BaseHostTest):
     mega = 1000000.0
     max_measurement_time = 180
 
-    # this value is obtained for measurements when there is 0 transport delay and we want accurancy of 5%
+    # this value is obtained for measurements when there is 0 transport delay and we want accuracy of 5%
     time_measurement_multiplier = 80
 
     def _callback_timing_drift_check_start(self, key, value, timestamp):

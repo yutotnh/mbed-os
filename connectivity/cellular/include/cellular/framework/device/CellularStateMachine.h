@@ -130,7 +130,7 @@ public:
     /** Get retry timeout array
      *
      * @param timeout   Pointer to timeout array
-     * @param array_len Max lenght of the array
+     * @param array_len Max length of the array
      */
     void get_retry_timeout_array(uint16_t *timeout, int &array_len) const;
 

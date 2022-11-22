@@ -81,7 +81,7 @@ public:
      *
      * @param connection The handle of the connection to send this request to.
      *
-     * @return BLE_ERROR_NONE if the request has been succesfully sent or the
+     * @return BLE_ERROR_NONE if the request has been successfully sent or the
      * appropriate error otherwise.
      *
      * @see ble::AttExchangeMTUResponse The type of response received from

@@ -43,7 +43,7 @@ public:
 
     /** This will advance time by given amount of milliseconds and then dispatch all events that were set to happen in that time.
      *
-     * @param ms number of miliseconds to advance time
+     * @param ms number of milliseconds to advance time
      */
     void dispatch(int milliseconds = -1) {
         if (milliseconds > 0) {

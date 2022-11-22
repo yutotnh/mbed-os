@@ -34,7 +34,7 @@ Also, some drivers run external IP stacks through AT command interface making it
 
 Any change on network state is reflected by the driver that calls the event handler that application can register. Refer to [Network Status](https://os.mbed.com/docs/v5.10/apis/network-status.html) from Mbed OS handbook. Problem is that this registering happens on driver side, and the high layer `NetworkInterface` API only provides a dummy implementation. If event based information is required API change is forced to either application side, or driver side.
 
-**Conclusion:** Network status is already provided by `NetworkInterface::get_connection_status()`. Event would cause API change, so will not be done for 5.11. But there are requests to change the API, so we can do it in 5.12. IP addresses are already provided by `NetworkInteface` API, so will not be touched by stats API.
+**Conclusion:** Network status is already provided by `NetworkInterface::get_connection_status()`. Event would cause API change, so will not be done for 5.11. But there are requests to change the API, so we can do it in 5.12. IP addresses are already provided by `NetworkInterface` API, so will not be touched by stats API.
 
 ### Socket
 
@@ -99,7 +99,7 @@ Status events should capture system timestamp associated with the events. API is
 ```
 typedef struct {
     uint32_t tick;                   /**< osKernelGetTick() value of when event happened, or equivalent timestamp */
-    NetworkInteface *interface;      /**< What interface caused this event */
+    NetworkInterface *interface;      /**< What interface caused this event */
     nsapi_connection_status_t status /**< What was the event */
 } mbed_stats_connection_t;
 

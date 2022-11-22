@@ -167,7 +167,7 @@ typedef enum {
  */
 typedef int (*mxc_i2c_slave_handler_t) (mxc_i2c_regs_t* i2c,
                                         mxc_i2c_slave_event_t event, void* data);
-                                        
+
 /***** Function Prototypes *****/
 
 /* ************************************************************************* */
@@ -362,7 +362,7 @@ int MXC_I2C_ReadByte (mxc_i2c_regs_t* i2c, unsigned char* byte, int ack);
  */
 int MXC_I2C_ReadByteInteractive (mxc_i2c_regs_t* i2c, unsigned char* byte,
                                  mxc_i2c_getAck_t getAck);
-                                 
+
 /**
  * @brief   Write multiple bytes to the I2C bus.
  *
@@ -401,7 +401,7 @@ int MXC_I2C_Write (mxc_i2c_regs_t* i2c, unsigned char* bytes, unsigned int* len)
  */
 int MXC_I2C_Read (mxc_i2c_regs_t* i2c, unsigned char* bytes, unsigned int* len,
                   int ack);
-                  
+
 /**
  * @brief   Unloads bytes from the receive FIFO.
  *
@@ -413,7 +413,7 @@ int MXC_I2C_Read (mxc_i2c_regs_t* i2c, unsigned char* bytes, unsigned int* len,
  */
 int MXC_I2C_ReadRXFIFO (mxc_i2c_regs_t* i2c, volatile unsigned char* bytes,
                                  unsigned int len);
-                                 
+
 /**
  * @brief   Unloads bytes from the receive FIFO using DMA for longer reads.
  *
@@ -428,7 +428,7 @@ int MXC_I2C_ReadRXFIFO (mxc_i2c_regs_t* i2c, volatile unsigned char* bytes,
  */
 int MXC_I2C_ReadRXFIFODMA (mxc_i2c_regs_t* i2c, unsigned char* bytes,
                            unsigned int len, mxc_i2c_dma_complete_cb_t callback);
-                           
+
 /**
  * @brief   Get the number of bytes currently available in the receive FIFO.
  *
@@ -449,7 +449,7 @@ int MXC_I2C_GetRXFIFOAvailable (mxc_i2c_regs_t* i2c);
  */
 int MXC_I2C_WriteTXFIFO (mxc_i2c_regs_t* i2c, volatile unsigned char* bytes,
                                   unsigned int len);
-                                  
+
 /**
  * @brief   Loads bytes into the transmit FIFO using DMA for longer writes.
  *
@@ -463,7 +463,7 @@ int MXC_I2C_WriteTXFIFO (mxc_i2c_regs_t* i2c, volatile unsigned char* bytes,
  */
 int MXC_I2C_WriteTXFIFODMA (mxc_i2c_regs_t* i2c, unsigned char* bytes,
                             unsigned int len, mxc_i2c_dma_complete_cb_t callback);
-                            
+
 /**
  * @brief   Get the amount of free space available in the transmit FIFO.
  *
@@ -782,7 +782,7 @@ int MXC_I2C_SlaveTransactionAsync (mxc_i2c_regs_t* i2c, mxc_i2c_slave_handler_t 
  * of bytes the slave transaction  functions should receive before issuing a
  * call to their callback function. Smaller values may consume more CPU
  * cycles, but reduce the risk of missing data from the master due to the
- * recieve FIFO being full. Larger values may reduce the number of CPU
+ * receive FIFO being full. Larger values may reduce the number of CPU
  * cycles, but may cause bytes sent from the master to be missed.
  *
  * @param   i2c         Pointer to I2C registers (selects the I2C block used.)

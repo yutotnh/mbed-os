@@ -6,7 +6,7 @@
 * @version	1.0
 * @date		20 Nov. 2011
 * @author	NXP MCU SW Application Team
-* 
+*
 * Copyright(C) 2011, NXP Semiconductor
 * All rights reserved.
 *
@@ -88,7 +88,7 @@ uint32_t lpc_mii_is_busy(void);
 /** \brief  Starts a read operation via the MII link (non-blocking)
  *
  *  This function returns the current value in the MII data register. It is
- *  meant to be used with the non-blocking oeprations. This value should
+ *  meant to be used with the non-blocking operations. This value should
  *  only be read after a non-block read command has been issued and the
  *  MII status has been determined to be good.
  *
@@ -114,7 +114,7 @@ bool lpc_mii_read(uint32_t PhyReg, uint32_t *data);
  *
  *  This function will read a value on the MII link interface from a PHY
  *  or a connected device. The function will block until complete.
- * 
+ *
  *  \param[in]      PhyReg  PHY register to read from
  */
 void lpc_mii_read_noblock(uint32_t PhyReg);

@@ -1250,7 +1250,7 @@ static void rf_set_timeout(uint32_t *pEndTime)
     MCR20Drv_DirectAccessSPIMultiByteWrite(T3CMP_LSB, (uint8_t *) pEndTime, 3);
 
     phyReg &= ~(cIRQSTS3_TMR3MSK);      /* unmask TMR3 interrupt */
-    phyReg |= (cIRQSTS3_TMR3IRQ);       /* aknowledge TMR3 IRQ */
+    phyReg |= (cIRQSTS3_TMR3IRQ);       /* acknowledge TMR3 IRQ */
     MCR20Drv_DirectAccessSPIWrite(IRQSTS3, phyReg);
 
     platform_exit_critical();

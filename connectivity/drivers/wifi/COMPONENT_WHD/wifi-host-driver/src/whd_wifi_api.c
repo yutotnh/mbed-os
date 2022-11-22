@@ -1,13 +1,13 @@
 /*
  * Copyright 2021, Cypress Semiconductor Corporation (an Infineon company)
  * SPDX-License-Identifier: Apache-2.0
- * 
+ *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- * 
+ *
  *     http://www.apache.org/licenses/LICENSE-2.0
- * 
+ *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -2077,7 +2077,7 @@ static void whd_scan_count_handler(whd_scan_result_t **result_ptr, void *user_da
     uint32_t result;
     whd_scan_userdata_t *scan_userdata = (whd_scan_userdata_t *)user_data;
 
-    /* finished scan, either succesfully or through an abort */
+    /* finished scan, either successfully or through an abort */
     if (status != WHD_SCAN_INCOMPLETE)
     {
         DISABLE_COMPILER_WARNING(diag_suppress = Pa039)
@@ -2102,7 +2102,7 @@ static void whd_scan_result_handler(whd_scan_result_t **result_ptr, void *user_d
     whd_scan_userdata_t *scan_userdata = (whd_scan_userdata_t *)user_data;
     whd_scan_result_t *current_result = (whd_scan_result_t *)(*result_ptr);
 
-    /* finished scan, either succesfully or through an abort */
+    /* finished scan, either successfully or through an abort */
     if (status != WHD_SCAN_INCOMPLETE)
     {
         DISABLE_COMPILER_WARNING(diag_suppress = Pa039)

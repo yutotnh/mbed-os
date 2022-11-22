@@ -1011,7 +1011,7 @@ static void radioEventHandler(RAIL_Handle_t railHandle,
                             /* Packet going temporarily onto stack for bare-metal apps */
                             uint8_t packetBuffer[MAC_PACKET_MAX_LENGTH + MAC_PACKET_INFO_LENGTH];
 #endif
-                            /* First two bytes are RSSI and LQI, respecitvely */
+                            /* First two bytes are RSSI and LQI, respectively */
                             packetBuffer[MAC_PACKET_OFFSET_RSSI] = (uint8_t)rxPacketDetails.rssi;
                             packetBuffer[MAC_PACKET_OFFSET_LQI] = (uint8_t)rxPacketDetails.lqi;
 
@@ -1118,7 +1118,7 @@ static void radioEventHandler(RAIL_Handle_t railHandle,
                 /*
                 * Occurs when the transmit FIFO falls under the configured
                 * threshold value. It only occurs if a rising edge occurs across this
-                * threshold. This event does not occur on initailization or after resetting
+                * threshold. This event does not occur on initialization or after resetting
                 * the transmit FIFO with RAIL_ResetFifo().
                 * Call \ref RAIL_GetTxFifoSpaceAvailable to get the number of bytes
                 * available in the transmit FIFO at the time of the callback dispatch.

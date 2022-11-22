@@ -334,7 +334,7 @@ void scl_scan_handler(scl_scan_result_t *result_ptr,
         return;
     }
 
-    // finished scan, either succesfully or through an abort
+    // finished scan, either successfully or through an abort
     if (status != SCL_SCAN_INCOMPLETE) {
         data->scan_in_progress = false;
         data->sema->release();

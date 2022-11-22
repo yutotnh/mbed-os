@@ -220,7 +220,7 @@ void i2c_reset(i2c_t *obj);
 /** Read one byte
  *
  *  @param obj The I2C object
- *  @param last Acknoledge
+ *  @param last Acknowledge
  *  @return The read byte
  */
 int i2c_byte_read(i2c_t *obj, int last);

@@ -830,7 +830,7 @@ static bool sysevt_wait(void)
     if (!sys_event_sem.try_acquire_for(10000)) {
         return false;
     } else {
-        /*  release immmediately, now that M0 runs */
+        /*  release immediately, now that M0 runs */
         sys_event_sem.release();
         return true;
     }
@@ -844,7 +844,7 @@ static bool sysevt_check(void)
     if (!sys_event_sem.try_acquire_for(10)) {
         return false;
     } else {
-        /*  release immmediately as M0 already runs */
+        /*  release immediately as M0 already runs */
         sys_event_sem.release();
         return true;
     }

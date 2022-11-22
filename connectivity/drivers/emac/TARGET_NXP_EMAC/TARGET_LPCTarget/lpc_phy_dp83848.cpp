@@ -74,9 +74,9 @@
 #define DP8_10BASE_T_FD    (1 << 12)  /**< 100Bps full duplex */
 #define DP8_10BASE_T_HD    (1 << 11)  /**< 10MBps half duplex */
 #define DP8_MF_PREAMB_SUPPR (1 << 6)  /**< Preamble suppress */
-#define DP8_AUTONEG_COMP   (1 << 5)   /**< Auto-negotation complete */
+#define DP8_AUTONEG_COMP   (1 << 5)   /**< Auto-negotiation complete */
 #define DP8_RMT_FAULT      (1 << 4)   /**< Fault */
-#define DP8_AUTONEG_ABILITY (1 << 3)  /**< Auto-negotation supported */
+#define DP8_AUTONEG_ABILITY (1 << 3)  /**< Auto-negotiation supported */
 #define DP8_LINK_STATUS    (1 << 2)   /**< 1=Link active */
 #define DP8_JABBER_DETECT  (1 << 1)   /**< Jabber detect */
 #define DP8_EXTEND_CAPAB   (1 << 0)   /**< Supports extended capabilities */
@@ -99,7 +99,7 @@
 #define PHY_SCSR_DUPLEX     0x0010    /**< PHY Duplex Mask             */
 
 /** \brief Link status bits */
-#define LNK_STAT_VALID       0x01 
+#define LNK_STAT_VALID       0x01
 #define LNK_STAT_FULLDUPLEX  0x02
 #define LNK_STAT_SPEED10MPS  0x04
 
@@ -333,8 +333,8 @@ bool lpc_phy_init(LPC17_EMAC *lpc17_emac, int rmii)
 	// read PHY ID
 	lpc_mii_read(DP8_IDR1_REG, &tmp);
 	phy_id = (tmp << 16);
-	lpc_mii_read(DP8_IDR2_REG, &tmp);    
-	phy_id |= (tmp & 0XFFF0);    
+	lpc_mii_read(DP8_IDR2_REG, &tmp);
+	phy_id |= (tmp & 0XFFF0);
 
 	/* Setup link based on configuration options */
 #if PHY_USE_AUTONEG==1
@@ -376,26 +376,26 @@ int32_t lpc_phy_sts_sm(LPC17_EMAC *lpc17_emac)
 	switch (phyustate) {
 		default:
 		case 0:
-			if (phy_id == DP83848C_ID) {    
+			if (phy_id == DP83848C_ID) {
 				lpc_mii_read_noblock(DP8_PHY_STAT_REG);
 				phyustate = 2;
 			}
 			else if (phy_id == LAN8720_ID || phy_id == KSZ8041_ID) {
 				lpc_mii_read_noblock(DP8_PHY_SCSR_REG);
-				phyustate = 1;        
+				phyustate = 1;
 			}
 			break;
 
 		case 1:
 			if (phy_id == LAN8720_ID || phy_id == KSZ8041_ID) {
 				tmp = lpc_mii_read_data();
-				// we get speed and duplex here. 
+				// we get speed and duplex here.
 				phy_lan7420_sts_tmp =  (tmp & PHY_SCSR_DUPLEX)  ? LNK_STAT_FULLDUPLEX : 0;
 				phy_lan7420_sts_tmp |= (tmp & PHY_SCSR_100MBIT) ? 0 : LNK_STAT_SPEED10MPS;
 
-				//read the status register to get link status 
+				//read the status register to get link status
 				lpc_mii_read_noblock(DP8_BMSR_REG);
-				phyustate = 2;        
+				phyustate = 2;
 			}
 			break;
 
@@ -414,11 +414,11 @@ int32_t lpc_phy_sts_sm(LPC17_EMAC *lpc17_emac)
 				else if (phy_id == LAN8720_ID || phy_id == KSZ8041_ID) {
 					// we only get the link status here.
 					phy_lan7420_sts_tmp |= (tmp & DP8_LINK_STATUS) ? LNK_STAT_VALID : 0;
-					data = phy_lan7420_sts_tmp;          
+					data = phy_lan7420_sts_tmp;
 				}
 
 				changed = lpc_update_phy_sts(lpc17_emac, data);
-				phyustate = 0;                
+				phyustate = 0;
 			}
 			break;
 	}

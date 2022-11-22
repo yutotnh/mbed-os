@@ -46,7 +46,7 @@ nsapi_error_t ONBOARD_TELIT_HE910::hard_power_off()
 
 nsapi_error_t ONBOARD_TELIT_HE910::soft_power_on()
 {
-    /* keep the power line low for 200 milisecond */
+    /* keep the power line low for 200 millisecond */
     press_power_button(200);
     /* give modem a little time to respond */
     thread_sleep_for(100);

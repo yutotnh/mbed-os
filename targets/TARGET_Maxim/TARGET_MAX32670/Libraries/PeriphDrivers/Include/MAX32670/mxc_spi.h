@@ -75,7 +75,7 @@ extern "C" {
  * 1. set txData to the address, txLen=1
  * 2. set rxData to a buffer of 1 byte, rxLen=1
  * 3. The driver will transmit the txData, and after completion of
- *    txData begin to recieve data, padding MOSI with DefaultTXData
+ *    txData begin to receive data, padding MOSI with DefaultTXData
  *
  */
 typedef enum {
@@ -87,17 +87,17 @@ typedef enum {
 
 /**
  * @brief The list of SPI modes
- * 
+ *
  * SPI supports four combinations of clock and phase polarity
- * 
- * Clock polarity is controlled using the bit SPIn_CTRL2.cpol 
+ *
+ * Clock polarity is controlled using the bit SPIn_CTRL2.cpol
  * and determines if the clock is active high or active low
- * 
+ *
  * Clock phase determines when the data must be stable for sampling
- *  
+ *
  */
 typedef enum {
-    SPI_MODE_0,                     ///< clock phase = 0, clock polarity = 0 
+    SPI_MODE_0,                     ///< clock phase = 0, clock polarity = 0
     SPI_MODE_1,                     ///< clock phase = 0, clock polarity = 1
     SPI_MODE_2,                     ///< clock phase = 1, clock polarity = 0
     SPI_MODE_3,                     ///< clock phase = 1, clock polarity = 1
@@ -299,19 +299,19 @@ mxc_spi_width_t MXC_SPI_GetWidth (mxc_spi_regs_t* spi);
 
 /**
  * @brief   Sets the spi mode using clock polarity and clock phase
- * 
+ *
  * @param spi           Pointer to SPI registers (selects the SPI block used.)
  * @param spiMode       \ref mxc_spi_mode_t
- *  
- * @return Success/Fail, see \ref MXC_Error_Codes for a list of return codes. 
+ *
+ * @return Success/Fail, see \ref MXC_Error_Codes for a list of return codes.
  */
 int MXC_SPI_SetMode (mxc_spi_regs_t* spi, mxc_spi_mode_t spiMode);
 
 /**
  * @brief   Gets the spi mode
- * 
+ *
  * @param spi           Pointer to SPI registers (selects the SPI block used.)
- * 
+ *
  * @return mxc_spi_mode_t   \ref mxc_spi_mode_t
  */
 mxc_spi_mode_t MXC_SPI_GetMode (mxc_spi_regs_t* spi);

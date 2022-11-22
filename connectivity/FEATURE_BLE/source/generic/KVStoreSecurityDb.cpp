@@ -120,7 +120,7 @@ bool KVStoreSecurityDb::erase_db()
         db_write_entry((SecurityEntrySigning_t*)zero.buffer, DB_ENTRY_PEER_SIGNING, index);
     }
 
-    /* now we write the version and read it back to see if was written succesfully */
+    /* now we write the version and read it back to see if was written successfully */
     uint8_t version = KVSTORESECURITYDB_VERSION;
     db_write(&version, DB_VERSION);
     version = 0;

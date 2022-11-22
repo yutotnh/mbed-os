@@ -11,7 +11,7 @@ Unless required by applicable law or agreed to in writing, software
 distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
-limitations 
+limitations
 """
 import click
 import requests
@@ -22,7 +22,7 @@ import json
 import subprocess
 
 """
-This file contains ghcr utlity wrapper used for:
+This file contains ghcr utility wrapper used for:
 - retrieving digest of docker image
 - deleting images in ghcr
 """

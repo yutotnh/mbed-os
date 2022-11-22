@@ -98,7 +98,7 @@ typedef enum ospi_address_size {
  */
 typedef uint8_t ospi_alt_size_t;
 
-// The following defines are provided for backwards compatibilty. New code should explicitly
+// The following defines are provided for backwards compatibility. New code should explicitly
 // specify the required number of alt bits.
 #define OSPI_CFG_ALT_SIZE_8 8u
 #define OSPI_CFG_ALT_SIZE_16 16u
@@ -139,7 +139,7 @@ typedef struct ospi_command {
 typedef enum ospi_status {
     OSPI_STATUS_ERROR = -1, /**< Generic error >*/
     OSPI_STATUS_INVALID_PARAMETER = -2, /**< The parameter is invalid >*/
-    OSPI_STATUS_OK    =  0, /**< Function executed sucessfully  >*/
+    OSPI_STATUS_OK    =  0, /**< Function executed successfully  >*/
 } ospi_status_t;
 
 /** Initialize OSPI peripheral.
@@ -210,7 +210,7 @@ ospi_status_t ospi_frequency(ospi_t *obj, int hz);
  * @param command OSPI command
  * @param data TX buffer
  * @param[in,out] length in - TX buffer length in bytes, out - number of bytes written
- * @return OSPI_STATUS_OK if the data has been succesfully sent
+ * @return OSPI_STATUS_OK if the data has been successfully sent
            OSPI_STATUS_INVALID_PARAMETER if invalid parameter found
            OSPI_STATUS_ERROR otherwise
  */
@@ -224,7 +224,7 @@ ospi_status_t ospi_write(ospi_t *obj, const ospi_command_t *command, const void 
  * @param tx_size TX buffer length in bytes
  * @param rx_data RX buffer
  * @param rx_size RX buffer length in bytes
- * @return OSPI_STATUS_OK if the data has been succesfully sent
+ * @return OSPI_STATUS_OK if the data has been successfully sent
            OSPI_STATUS_INVALID_PARAMETER if invalid parameter found
            OSPI_STATUS_ERROR otherwise
  */
@@ -236,7 +236,7 @@ ospi_status_t ospi_command_transfer(ospi_t *obj, const ospi_command_t *command, 
  * @param command OSPI command
  * @param data RX buffer
  * @param[in,out] length in - RX buffer length in bytes, out - number of bytes read
- * @return OSPI_STATUS_OK if data has been succesfully received
+ * @return OSPI_STATUS_OK if data has been successfully received
            OSPI_STATUS_INVALID_PARAMETER if invalid parameter found
            OSPI_STATUS_ERROR otherwise
  */

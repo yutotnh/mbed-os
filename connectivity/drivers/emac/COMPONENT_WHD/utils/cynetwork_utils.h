@@ -26,7 +26,7 @@ extern "C" {
 #endif
 
 #ifndef MIN
-extern int MIN(/*@sef@*/ int x, /*@sef@*/ int y);  /* LINT : This tells lint that  the parameter must be side-effect free. i.e. evaluation does not change any values (since it is being evaulated more than once */
+extern int MIN(/*@sef@*/ int x, /*@sef@*/ int y);  /* LINT : This tells lint that  the parameter must be side-effect free. i.e. evaluation does not change any values (since it is being evaluated more than once */
 #define MIN(x,y) ((x) < (y) ? (x) : (y))
 #endif /* ifndef MIN */
 
@@ -77,7 +77,7 @@ uint8_t unsigned_to_decimal_string(uint32_t value, char *output, uint8_t min_len
  *
  *  @note: String is 16 bytes including terminating null
  *
- * @param[out] buffer       : Buffer which will recieve the IPv4 string
+ * @param[out] buffer       : Buffer which will receive the IPv4 string
  * @param[in]  ipv4_address : IPv4 address to convert
  */
 void ipv4_to_string(char buffer[16], uint32_t ipv4_address);

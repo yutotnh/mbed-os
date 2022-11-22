@@ -152,7 +152,7 @@ TEST_F(TestAT_CellularNetwork, test_urc_creg)
     expected_cellid = 0;
 
     ATHandler_stub::int_count = 4;
-    ATHandler_stub::int_valid_count_table[3] = 0; // [1] STAT, Not reqistered
+    ATHandler_stub::int_valid_count_table[3] = 0; // [1] STAT, Not registered
     ATHandler_stub::int_valid_count_table[2] = 9; // [4] ACT, NB-IoT
     ATHandler_stub::int_valid_count_table[1] = 1; // [5] cause_type, skipped
     ATHandler_stub::int_valid_count_table[0] = 1; // [6] reject_cause, skipped

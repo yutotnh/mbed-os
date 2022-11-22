@@ -232,7 +232,7 @@ struct GapConnectionCompleteEvent : public GapEvent {
 
 
     /*
-     * @param status Indicate if the connection succesfully completed or not:
+     * @param status Indicate if the connection successfully completed or not:
      *   - 0: Connection successfuly completed
      *   - [0x01 : 0xFF] Connection failed to complete, the value represent
      *     the code for the error.
@@ -370,7 +370,7 @@ struct GapConnectionUpdateEvent : public GapEvent {
     }
 
     /**
-     * If equal to 0, the connection update has succesfully completed otherwise
+     * If equal to 0, the connection update has successfully completed otherwise
      * the process has failled and this field represent the error associated to
      * the faillure.
      */

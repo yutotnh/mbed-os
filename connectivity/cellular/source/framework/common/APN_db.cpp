@@ -42,7 +42,7 @@
  */
 typedef struct {
     const char *mccmnc; /**< mobile country code (MCC) and mobile network code MNC */
-    const char *cfg;     /**<  APN configuartion string, use _APN macro to generate */
+    const char *cfg;     /**<  APN configuration string, use _APN macro to generate */
 } APN_t;
 
 /**

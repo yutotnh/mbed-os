@@ -273,7 +273,7 @@ emac_mem_buf_t *LPC17_EMAC::lpc_low_level_input()
 #endif
 
     /* Monitor RX overrun status. This should never happen unless
-       (possibly) the internal bus is behing held up by something.
+       (possibly) the internal bus is being held up by something.
        Unless your system is running at a very low clock speed or
        there are possibilities that the internal buses may be held
        up for a long time, this can probably safely be removed. */
@@ -494,7 +494,7 @@ bool LPC17_EMAC::link_out(emac_mem_buf_t *p)
        the number of descriptors needed for the transfer and make sure packet addresses
        are DMA safe.
 
-       A DMA safe address is once that uses external memory or periphheral RAM.
+       A DMA safe address is once that uses external memory or peripheral RAM.
        IRAM and FLASH are not safe! */
     dn = 0;
     for (q = p; q != NULL; q = memory_manager->get_next(q)) {

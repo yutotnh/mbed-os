@@ -140,10 +140,10 @@ void pwmout_period(pwmout_t *obj, float seconds)
     pwmout_period_us(obj, seconds * 1000000.0f);
 }
 
-/** Set the PWM period specified in miliseconds, keeping the duty cycle the same
+/** Set the PWM period specified in milliseconds, keeping the duty cycle the same
  *
  * @param obj The pwmout object
- * @param ms  The milisecond period
+ * @param ms  The millisecond period
  */
 void pwmout_period_ms(pwmout_t *obj, int ms)
 {
@@ -209,10 +209,10 @@ void pwmout_pulsewidth(pwmout_t *obj, float seconds)
     pwmout_pulsewidth_us(obj, seconds * 1000000.0f);
 }
 
-/** Set the PWM pulsewidth specified in miliseconds, keeping the period the same.
+/** Set the PWM pulsewidth specified in milliseconds, keeping the period the same.
  *
  * @param obj The pwmout object
- * @param ms  The floating-point pulsewidth in miliseconds
+ * @param ms  The floating-point pulsewidth in milliseconds
  */
 void pwmout_pulsewidth_ms(pwmout_t *obj, int ms)
 {

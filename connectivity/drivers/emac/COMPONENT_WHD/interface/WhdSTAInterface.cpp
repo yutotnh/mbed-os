@@ -455,7 +455,7 @@ static void whd_scan_handler(whd_scan_result_t **result_ptr,
         return;
     }
 
-    // finished scan, either succesfully or through an abort
+    // finished scan, either successfully or through an abort
     if (status != WHD_SCAN_INCOMPLETE) {
         data->scan_in_progress = false;
         data->sema->release();
